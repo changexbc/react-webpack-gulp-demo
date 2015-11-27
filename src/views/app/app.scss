@@ -1,0 +1,80 @@
+@import "../../sass/_variables";
+@import "../../sass/_reset";
+@import "../../sass/_extends";
+@import "../../sass/_mixins";
+
+html,body{
+  height:100%;
+}
+body{
+  position:relative;
+}
+.show{
+  display:block!important;
+}
+.hide{
+  display:none!important;
+}
+#app-box {
+  width:100%;
+  height:100%;
+}
+#app {
+  width:100%;
+  height:100%;
+}
+.page{
+  box-sizing:border-box;
+  top:0;
+  left:0;
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
+  &.no-scroll{
+    overflow:hidden;
+  }
+}
+.example-enter {
+  opacity: 0;
+  transform:translate3d(0,20px,0);
+  transition: all .3s .15s ease;
+}
+
+.example-enter.example-enter-active {
+  transform:translate3d(0,0,0);
+  opacity: 1;
+}
+
+.example-leave {
+  opacity: 1;
+  transition: all .15s ease;
+}
+
+.example-leave.example-leave-active {
+  transform:translate3d(0,20px,0);
+  opacity: 0;
+}
+.loading{
+    @extend %loading;
+}
+.loading__icon{
+    @extend %loading__icon;
+}
+
+.card{
+  margin-top:15px;
+  background-color: #fff;
+}
+.card-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 0;
+  margin:0 10px;
+  border-bottom:1px solid $grayLight;
+  &:last-child{
+    border-bottom:none;
+  }
+}

@@ -1,0 +1,148 @@
+@import "../../sass/_variables";
+@import "../../sass/_extends";
+@import "../../sass/_mixins";
+
+
+.page-index{
+  padding:0 8px 0px 8px;
+}
+.index-no-data{
+  text-align:center;
+  padding-top:48px;
+  .no-data-img{
+    display:inline-block;
+    width:128px;
+    height:128px;
+    background: url('../../images/noData.png') center center no-repeat;
+    background-size:128px 128px;
+  }
+  p{
+    color:#cccccc;
+    padding-top:24px;
+  }
+}
+.car-license{
+  font-size:16px;
+  font-weight:bold;
+}
+.car-complement{
+  color:$orange;
+}
+.car-info{
+  color:$gray;
+
+}
+.car-edit{
+  display:block;
+  width:30px;
+  height:30px;
+  background: url(../../images/icon-edit.png) no-repeat center center;
+  background-size: 16px 16px;
+}
+.car-inspection{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.inspection-info{
+  position:relative;
+  width:206px;
+  height:206px;
+  background: url(../../images/circle.png) no-repeat 0px center;
+  background-size:200px  auto;
+}
+.inspection-info-inner{
+  text-align:center;
+  position:absolute;
+  width:100%;
+  top:50%;
+  left:50%;
+  transform:translate3d(-50%,-50%,0)
+}
+.inspection-days{
+  h1{
+    display:inline-block;
+    font-size:60px;
+    color:$orange;
+    text-align:center;
+    position:relative;
+    i{
+      position:absolute;
+      left:100%;
+      bottom:6px;
+      font-size:14px;
+      white-space: nowrap;
+      color:$textColor;
+    }
+  }
+}
+.inspection-text{
+  padding:22px 0 10px 0;
+}
+.inspection-status{
+  span{
+    display:inline-block;
+    color:#fff;
+    background-color: #32a597;
+    border-radius:10px;
+    padding:5px 10px;
+  }
+}
+.inspection-last{
+  display:block;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.inspection-last__item{
+  display:flex;
+  justify-content:space-between;
+  padding:4px 0;
+
+}
+.inspection-time{
+  color:$gray;
+  margin-top:0;
+  .card-item:first-child{
+    border-top:1px solid $grayLight;
+  }
+}
+.index-tips{
+  color:#cccccc;
+  padding:15px 0;
+  text-align:center;
+}
+.inspection-type{
+  font-size:12px;
+  position:relative;
+  padding-right:22px;
+
+}
+.inspection-type:after{
+    content:'';
+    background: url('../../images/tip.png') center center no-repeat;
+    background-size:18px 18px;
+    width:18px;
+    height:18px;
+    position:absolute;
+    right:0px;
+    top:50%;
+    margin:-9px 0 0 0;
+  }
+.inspection-help{
+  padding-top:16px;
+  padding-bottom:16px;
+  .link{
+    flex:1;
+    padding:16px 0;
+    display:block;
+    background-color: $orange;
+    font-size:16px;
+    color:#fff;
+    text-align:center;
+    border-radius:3px;
+    &:active{
+      background-color: darken($orange,10%);
+    }
+  }
+}

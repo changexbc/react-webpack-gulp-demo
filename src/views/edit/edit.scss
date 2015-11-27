@@ -1,0 +1,81 @@
+@import "../../sass/variables";
+@import "../../sass/extends";
+@import "../../sass/mixins";
+
+.page-car-edit{
+  color:$gray;
+  .card-item{
+    padding:0;
+    margin:0 15px;
+  }
+  .picker-wrap{
+    flex:1;
+    position:relative;
+    select,input{
+      width:100%;
+      box-sizing:border-box;
+      padding:20px 15px;
+      color:$orange;
+      background-color: #fff;
+      text-align:right;
+    }
+    &:before{
+      content:'';
+      position:absolute;
+      right:0px;
+      top:50%;
+      margin-top:-6px;
+      @include triangle(12px,$orange,right)
+    }
+    &:after{
+      content:'';
+      position:absolute;
+      right:3px;
+      top:50%;
+      margin-top:-6px;
+      @include triangle(12px,#fff,right)
+    }
+  }
+}
+.edit-save{
+  padding:24px 15px;
+  a{
+    display:block;
+    font-size:16px;
+    font-weight:bold;
+    color:#fff;
+    background-color: $orange;
+    padding:12px 0;
+    text-align:center;
+    border-radius:2px;
+    &:active{
+      background-color: darken($orange,10%);
+    }
+  }
+}
+.edit-license{
+  padding:20px 15px;
+}
+.edit-regdate{
+  position:relative;
+  padding: 20px 22px 20px 0;
+  &:after{
+    content:'';
+    background: url('../../images/tip.png') center center no-repeat;
+    background-size:18px 18px;
+    width:18px;
+    height:18px;
+    position:absolute;
+    right:0px;
+    top:50%;
+    margin:-9px 0 0 0;
+  }
+}
+.modal-img{
+  display:inline-block;
+  margin:0 auto;
+  width:100%;
+  padding-top:64%;
+  background: url('../../images/regexp.jpg') center center no-repeat;
+  background-size:100% 100%;
+}
