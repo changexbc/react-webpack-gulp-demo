@@ -3,18 +3,12 @@
 @import "../../sass/_mixins";
 
 .modal{
-    display:none;
-    opacity:0;
     position: fixed;
     z-index: 9998;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    transition: opacity .3s ease;
-    &.fadeIn{
-      opacity:1;
-    }
 }
 .modal-mask {
     position: absolute;

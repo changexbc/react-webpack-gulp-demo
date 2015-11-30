@@ -1,6 +1,7 @@
 require('./modal.scss')
 import React from 'react'
 import classNames from 'classnames';
+import Animation from '../animation/animation.js';
 
 export default class Modal extends React.Component {
   constructor(props) {
@@ -9,22 +10,8 @@ export default class Modal extends React.Component {
     this.close = this.close.bind(this)
   }
 
-  componentWillReceiveProps(nextProps) {
-    let currentModal = $(this.refs.modal)
-    let effectName = this.props.effect
-    if (!this.props.show && nextProps.show) {
-      currentModal.css('display','block').height()
-      currentModal.addClass(effectName)
-
-    } else if (this.props.show && !nextProps.show) {
-      currentModal.removeClass(effectName)
-      currentModal.one('webkitTransitionEnd',function(){
-         currentModal.css('display','none')
-      })
-    }
-  }
-
   close(e) {
+    console.log(this.props)
     if(this.props.maskClose){
       this.props.onClose();
     }
@@ -33,12 +20,12 @@ export default class Modal extends React.Component {
 
   render() {
     return (
-      <div ref="modal" className='modal'>
+      <Animation defaultClass='modal' show={this.props.show} effect={this.props.effect}>
         <div className="modal-mask" onClick={ this.close }></div>
         <div className="modal-container">
           {this.props.children}
         </div>
-      </div>
+      </Animation>
     )
   }
 }

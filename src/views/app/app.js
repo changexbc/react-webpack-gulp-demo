@@ -54,8 +54,8 @@ export default class App extends React.Component{
           component="div" transitionName="example"
           transitionEnterTimeout={500} transitionLeaveTimeout={500}
         >
-          {this.props.children}
-        </RouteCSSTransitionGroup>
+        {this.props.children}
+      </RouteCSSTransitionGroup>
 
     )
   }
